@@ -3,81 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Desgining</title>
+    <title>Card Designing</title>
     <style>
-        *{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             background-color: rgb(29, 9, 9);
-            
-        }
-        .outer{
-            background-color: rgb(148, 63, 63);
-            margin:auto;
-            border-radius: 15px;
-            padding: 8px;
-            height: 95vh;
-            width: 30vw;
-        }
-        .image{
-            overflow: hidden;
-            border-radius: 25px;
-            display:flex;
+            display: flex;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 16px;
         }
-        .Heading span{
-            margin: 5px;
-            border: 1px solid rgb(0, 0, 0);
+        .outer {
+            background-color: rgb(148, 63, 63);
+            border-radius: 15px;
+            padding: 16px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center children horizontally */
+        }
+        .image {
+            overflow: hidden;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .Heading {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+            width: 100%; /* Ensure full width for alignment */
+        }
+        .Heading span {
+            border: 2px solid rgb(0, 0, 0);
             background-color: rgba(41, 38, 38, 0.87);
             border-radius: 20px;
-            color:white;
+            color: white;
+            padding: 5px 10px;
         }
-        .Heading{
-            margin: 20px;
+        .content {
+            width: 100%; /* Ensure full width for alignment */
+        }
+        .content h2, .content p {
             background-color: rgb(148, 63, 63);
         }
-        .content{
-            background-color: rgb(148, 63, 63);
-            margin:8px;
+        .content h2 {
+            color: black;
+            margin-bottom: 10px;
         }
-        .content h2{
-            background-color: rgb(148, 63, 63);
-            color:black
+        .content p {
+            color: white;
         }
-        .content p{
-            background-color: rgb(148, 63, 63);
-        }
-        
-        .button{
-            background-color: white;
-            color:white;
-            position:relative;
-            background-color: rgba(41, 38, 38, 0.87);;;
-            left: 150px;
-            bottom:10px;
-            padding:7px;
-            display:inline-block;
-            margin:1px auto;
+        .button {
+            background-color: rgba(41, 38, 38, 0.87);
+            color: white;
+            padding: 10px 20px;
             border: 2px solid rgb(0, 0, 0);
             border-radius: 20px;
             font-weight: bold;
+            text-align: center;
+            margin: 15px 20px;
+            display: inline-block;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%; /* Ensure full width for alignment */
         }
     </style>
 </head>
 <body>
     <div class="outer">
         <div class="image">
-            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/287b54128482287.Y3JvcCwxOTk5LDE1NjQsMCw1ODQ.jpg" width="420" height="322.5">
+            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/287b54128482287.Y3JvcCwxOTk5LDE1NjQsMCw1ODQ.jpg" alt="Tamasha">
         </div>
-        <div class="Heading">
-            <span>&nbsp Drama &nbsp</span>
-            <span>&nbsp Finding Yourself &nbsp </span>
+        <div class="container">
+            <div class="Heading">
+                <span>Drama</span>
+                <span>Finding Yourself</span>
+            </div>
+            <div class="content">
+                <h2>Tamasha</h2>
+                <p>Ved and Tara fall in love while on a holiday in Corsica and decide to keep their real identities undisclosed. Tara returns to Delhi and meets a new Ved, who is trying to discover his true self.</p>
+            </div>
         </div>
-        <div class="content">
-            <h2>Tamasha</h2>
-            <p>Ved and Tara fall in love while on a holiday in Corsica and decide to keep their real identities undisclosed. Tara returns to Delhi and meets a new Ved, who is trying to discover his true self.</p>
-        </div>
-        <span class="button">
-        Read More
-        </span>
+        <span class="button">Read More</span>
     </div>
 </body>
 </html>
